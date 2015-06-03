@@ -359,7 +359,7 @@ namespace Microsoft.AspNet.Mvc
             }
             else
             {
-                httpContext.Setup(h => h.Session[It.IsAny<string>()]);
+                httpContext.Setup(h => h.Session.TryGetValue(It.IsAny<string>(), ));
             }
             if (sessionEnabled)
             {
